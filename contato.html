@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Contate-nos</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/jpg" href ="images/logo.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script language="javascript" type="text/javascript">
+            function validar(){
+                var fullname = cadastro.fullname.value;
+                var email = cadastro.email.value;
+
+                if (fullname == ""){
+                    alert ('Por favor, preencha o campo obrigatório com o seu nome completo');
+                    cadastro.fullname.focus();
+                return false;
+                }
+
+                if (email == ""){
+                    alert ('Por favor, preencha o campo obrigatório com um email válido');
+                    cadastro.email.focus();
+                return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="modelo.html">Modelo</a></li>
+                <li><a href="contato.html" class="ativa">Contato</a></li>
+            </ul>
+        </header>
+        <div class="containerpagctt">
+            <article class="articlectt">
+                <p class="titextarctt">Contate-nos</p>
+                <p class="arttextctth">
+                    Perguntas, solicitações, comentários, dúvidas ou sugestões?
+                </p>
+                <div class="box">
+                    <form name="cadastro" action="contatored.html" method="post">
+                        <p class="arttextctt">Nome completo: <id class="atualizactt">(Obrigatório)</id></p><input type="text" value="" name="fullname" placeholder="Digite seu nome completo">
+                        <br>
+                        <br>
+                        <p class="arttextctt">Email: <id class="atualizactt">(Obrigatório)</id></p><input type="text" value="" name="email" placeholder="Digite um email válido">
+                        <br>
+                        <br>
+                        <p class="arttextctt">Assunto:</p>
+                        <select name="assunto">
+                            <option></option>
+                            <option>Pergunta</option>
+                            <option>Solicitação</option>
+                            <option>Comentário</option>
+                            <option>Dúvida</option>
+                            <option>Sugestão</option>
+                        </select>
+                        <br>
+                        <br>
+                        <p class="arttextctt">Sua mensagem</p>
+                        <textarea name="comentario" cols="35" rows="15" placeholder="Digite aqui"></textarea>
+                        <br>
+                        <input type="submit" onclick="return validar()" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </form>
+                </div>
+            </article>
+        </div>
+        <footer class="rodapeh">
+            <h5>Juliana Silva 2023 - &copyTodos os direitos reservados</h5>
+            <ul class="social">
+                <li><img src="images/instagramp.png"></li>
+                <li><img src="images/twitterp.png"></li>
+                <li><img src="images/githubp.png"></li>
+            </ul>
+            <div class="seta"><a href="#"><img src="images/seta.png"></a></div>
+        </footer>
+    </body>
+</html>
